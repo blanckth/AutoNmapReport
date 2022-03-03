@@ -40,7 +40,6 @@ ipFiltering () {
 portScan () {
 	nmap -v -d -A -r "$1" -oX "$2/$1.xml";
 }
-
 declare -r serv="summery/server";
 serverPS () {
 OLDIFS=$IFS;
@@ -131,12 +130,12 @@ clientCSVX () {
 	portSum "$clie";
 }
 MAIN () {
-#depend;
-#netIpScan;
-#ipFiltering;
-#serverPS;
-#clientPS;
-#serverCSVX;
+depend;
+netIpScan;
+ipFiltering;
+serverPS;
+clientPS;
+serverCSVX;
 clientCSVX;
 }
 MAIN;
